@@ -1,0 +1,49 @@
+{
+  "roomsList": [
+    {
+      "id": 1,
+      "roomType": "deluxe",
+      "price": 300,
+      "ameneties": "wifi, air conditioner, tv, window",
+      "checkIn": "2022-11-11T04:00:00.000Z",
+      "checkOut": "2022-11-12T04:00:00.000Z",
+      "rating": 3.4
+    },
+    {
+      "id": 2,
+      "roomType": "deluxe",
+      "price": 400,
+      "ameneties": "wifi, air conditioner, tv, window",
+      "checkIn": "2022-11-11T04:00:00.000Z",
+      "checkOut": "2022-11-12T04:00:00.000Z",
+      "rating": 4.4
+    },
+    {
+      "id": 3,
+      "roomType": "deluxe",
+      "price": 400,
+      "ameneties": "wifi, air conditioner, tv, window",
+      "checkIn": "2022-11-11T04:00:00.000Z",
+      "checkOut": "2022-11-12T04:00:00.000Z",
+      "rating": 5
+    },
+    {
+      "id": 88,
+      "roomType": "luxe",
+      "ameneties": "wifi",
+      "price": 150,
+      "checkIn": "2022-11-11T04:00:00.000Z",
+      "checkOut": "2022-11-12T04:00:00.000Z",
+      "rating": 2.4
+    },
+    {
+      "id": 79,
+      "roomType": "luxe",
+      "ameneties": "wifi",
+      "price": 150,
+      "checkIn": "2022-11-11T04:00:00.000Z",
+      "checkOut": "2022-11-12T04:00:00.000Z",
+      "rating": 2.4
+    }
+  ]
+}

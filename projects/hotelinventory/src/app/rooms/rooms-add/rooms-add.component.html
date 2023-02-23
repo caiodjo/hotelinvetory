@@ -1,0 +1,88 @@
+
+<div *ngIf="successMessage" class="alert alert-success">
+  {{ successMessage }}
+</div>
+
+<form #roomsForm="ngForm" (ngSubmit)="AddRoom(roomsForm)">
+  <div class="form-group">
+    <input
+      #roomType="ngModel"
+      minlength="5"
+      maxlength="20"
+      required
+      class="form-control"
+      type="text"
+      name="roomType"
+      [(ngModel)]="room.roomType"
+      placeholder="Room Type"
+      [ngModelOptions]="{updateOn: 'blur'}"
+    />
+  </div>
+  <div *ngIf="!roomType.pristine && roomType.errors?.['minlength']" class="alert alert-danger">
+    Digite mais caracteres (min 5, atual: {{roomType.errors?.['minlength'].actualLength}})
+  </div>
+  <div *ngIf="roomType.dirty && roomType.errors?.['required']" class="alert alert-danger">
+    Provide the room type!
+  </div>
+  <div class="form-group">
+    <input
+      required
+      class="form-control"
+      type="text"
+      name="amenities"
+      [(ngModel)]="room.ameneties"
+      placeholder="Room Ameneties"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      required
+      class="form-control"
+      type="number"
+      name="price"
+      [(ngModel)]="room.price"
+      placeholder="Room Price"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      required
+      class="form-control"
+      type="datetime"
+      name="checkInTime"
+      [(ngModel)]="room.checkIn"
+      placeholder="Check-in time"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      class="form-control"
+      required
+      type="datetime"
+      name="checkOutTime"
+      [(ngModel)]="room.checkOut"
+      placeholder="Check-out time"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      required
+      min="1"
+      max="5"
+      class="form-control"
+      type="number"
+      name="rating"
+      [(ngModel)]="room.rating"
+      placeholder="Rating"
+    />
+  </div>
+  <div>
+    <button
+      class="btn btn-primary"
+      type="submit"
+      [disabled]="roomsForm.invalid"
+    >
+      Submit
+    </button>
+  </div>
+</form>
